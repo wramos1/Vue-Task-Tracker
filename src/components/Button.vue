@@ -5,7 +5,9 @@
 </template>
 
 <script lang="ts">
-export default {
+import { defineComponent } from 'vue'
+
+export default defineComponent({
     name: 'Button',
     props: {
         text: String,
@@ -13,8 +15,8 @@ export default {
     },
     methods: {
         onClick() {
-            alert('Clicked')
+            this.$emit('btn-click')
         }
     }
-}
+})
 </script>
